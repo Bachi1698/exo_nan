@@ -23,9 +23,6 @@ dico_promo = {"Tarif vert":"Tarif bleu",  "Tarif orange":"Tarif vert", "Tarif ro
 
 if "Tarif" in tarif:
     print("Vous avez le", tarif, "\n")
-    decision = ""
-    while "N" != decision != "O":
-        decision = input("Acceptez vous le contrat de couleur ? [O]ui / [N]on : ").upper()
-        tarif = dico_promo[tarif] if decision == "O" else tarif
-
+    demande = int(input("Depuis combien de temps etes vous chez nous ? "))
+    tarif = dico_promo[tarif] if demande > 5 else tarif
     print("Vous avez finalement le", tarif)
